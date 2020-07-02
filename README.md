@@ -1,3 +1,5 @@
+Follow [this instruction](https://github.com/mate-academy/layout_task-guideline/blob/master/README.md) to solve task
+
 ### Task: Center the spider
 
 ![Preview](./src/images/preview.png)
