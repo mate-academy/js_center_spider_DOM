@@ -13,7 +13,7 @@ You no need to write any styles or HTML code in this task. Change only `main.js`
 
 Hints: 
 - Field has `wall` class.
-- Spider image has `spide` class.
+- Spider image has `spider` class.
 
 It's an expected result of your job:
 ![Result](./src/images/result.png)
