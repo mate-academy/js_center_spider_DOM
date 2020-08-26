@@ -1,5 +1,6 @@
 'use strict';
 
-document.querySelector('.spider').style.cssText = `
-  margin: 50%;
-  transform: translate(-50%, -50%)`;
+const spider = document.querySelector('.spider');
+
+spider.style.top = `calc(50% - ${spider.offsetHeight / 2}px`;
+spider.style.left = `calc(50% - ${spider.offsetWidth / 2}px`;
