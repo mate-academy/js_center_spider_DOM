@@ -1,3 +1,3 @@
 'use strict';
 
-// write code here
+document.querySelector('.spider').style.transform = `translate(175px, 175px)`;
