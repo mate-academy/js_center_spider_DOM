@@ -1,11 +1,7 @@
 'use strict';
 
-const wall = document.querySelector('.wall');
 const spider = document.querySelector('.spider');
 
-const wallHeighht = wall.clientHeight;
-const wallWidth = wall.clientWidth;
-
-spider.style.top = wallHeighht / 2 + 'px';
-spider.style.left = wallWidth / 2 + 'px';
+spider.style.top = '50%';
+spider.style.left = '50%';
 spider.style.transform = 'translate(-50%, -50%)';
