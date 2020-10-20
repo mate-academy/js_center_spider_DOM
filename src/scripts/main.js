@@ -8,31 +8,35 @@ const spider = {
   },
   direction: 0,
   toTop() {
-    if (spider.position.y > 2) {
+    if (spider.position.y > 5) {
       spider.position.y--;
       spider.direction = 0;
       transferToDOM();
+      listenDirections();
     }
   },
   toBottom() {
-    if (spider.position.y < 98) {
+    if (spider.position.y < 95) {
       spider.position.y++;
       spider.direction = 180;
       transferToDOM();
+      listenDirections();
     }
   },
   toRight() {
-    if (spider.position.x < 98) {
+    if (spider.position.x < 95) {
       spider.position.x++;
       spider.direction = 90;
       transferToDOM();
+      listenDirections();
     }
   },
   toLeft() {
-    if (spider.position.x > 2) {
+    if (spider.position.x > 5) {
       spider.position.x--;
       spider.direction = 270;
       transferToDOM();
+      listenDirections();
     }
   },
 };
@@ -41,11 +45,12 @@ const fly = {
   link: document.querySelector('.fly'),
   position: {
     x: 30,
-    y: 0,
+    y: 5,
   },
 };
 
 spider.link.style.transform = `translate(-50%, -50%)`;
+fly.link.style.transform = `translate(-50%, -50%)`;
 spider.link.style.transition = '0.2s';
 
 function transferToDOM() {
@@ -60,28 +65,55 @@ transferToDOM();
 
 let interval;
 
-function moveCore(direction) {
+function gameCore(direction) {
   interval = setInterval(direction, 50);
 }
 
 document.addEventListener('keydown', function(event) {
   if (event.code === 'ArrowUp') {
     clearInterval(interval);
-    moveCore(spider.toTop);
+    gameCore(spider.toTop);
   }
 
   if (event.code === 'ArrowDown') {
     clearInterval(interval);
-    moveCore(spider.toBottom);
+    gameCore(spider.toBottom);
   }
 
   if (event.code === 'ArrowRight') {
     clearInterval(interval);
-    moveCore(spider.toRight);
+    gameCore(spider.toRight);
   }
 
   if (event.code === 'ArrowLeft') {
     clearInterval(interval);
-    moveCore(spider.toLeft);
+    gameCore(spider.toLeft);
   }
 });
+
+function listenDirections() {
+  const xs = [fly.position.x, spider.position.x].sort((a, b) => b - a);
+  const ys = [fly.position.y, spider.position.y].sort((a, b) => b - a);
+
+  if (xs[0] - xs[1] < 6 && ys[0] - ys[1] < 6) {
+    scoreCount();
+    makeFly();
+  }
+}
+
+function randomInteger(min, max) {
+  const rand = min - 0.5 + Math.random() * (max - min + 1);
+
+  return Math.round(rand);
+}
+
+const score = document.querySelector('.score');
+
+function scoreCount() {
+  score.innerText++;
+}
+
+function makeFly() {
+  fly.position.y = randomInteger(5, 95);
+  fly.position.x = randomInteger(5, 95);
+}
