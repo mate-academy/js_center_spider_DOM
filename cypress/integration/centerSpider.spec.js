@@ -6,6 +6,7 @@ describe(('Spider application'), () => {
   });
 
   it('should center the spider by left border', () => {
+    // NOTE: waiting for transition
     // eslint-disable-next-line cypress/no-unnecessary-waiting
     cy.wait(1000);
 
