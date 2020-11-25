@@ -1,17 +1,13 @@
 'use strict';
 
-describe(('Spider application'), () => {
+describe('Spider application', () => {
   before(() => {
-    cy.visit('/');
+    cy.visit('');
   });
 
   it('should center the spider by left border', () => {
-    // NOTE: waiting for transition
-    // eslint-disable-next-line cypress/no-unnecessary-waiting
-    cy.wait(1000);
-
-    cy.get('.spider').then(($spider) => {
-      cy.get('.wall').then(($wall) => {
+    cy.get('.wall').then(($wall) => {
+      cy.get('.spider').should(($spider) => {
         const spider = $spider.get(0);
         const wall = $wall.get(0);
 
@@ -25,8 +21,8 @@ describe(('Spider application'), () => {
   });
 
   it('should center the spider by top border', () => {
-    cy.get('.spider').then(($spider) => {
-      cy.get('.wall').then(($wall) => {
+    cy.get('.wall').then(($wall) => {
+      cy.get('.spider').should(($spider) => {
         const spider = $spider.get(0);
         const wall = $wall.get(0);
 
