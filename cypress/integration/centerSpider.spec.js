@@ -2,7 +2,7 @@
 
 describe('Spider application', () => {
   before(() => {
-    cy.visit('');
+    cy.visit('/');
   });
 
   it('should center the spider by left border', () => {
