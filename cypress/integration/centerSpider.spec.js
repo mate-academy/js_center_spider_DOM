@@ -9,7 +9,7 @@ describe('Spider application', () => {
     cy.get('.wall').then(($wall) => {
       cy.get('.spider').should(($spider) => {
         const spiderLeft = $spider.offset().left;
-        const spiderLeftAbs = ($wall.innerWidth() / 2)
+        const expectedLeft = ($wall.innerWidth() / 2)
           + ($wall.offset().left + 10) - ($spider.width() / 2);
 
         expect(spiderLeft).to.equal(spiderLeftAbs);
