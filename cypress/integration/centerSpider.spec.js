@@ -21,7 +21,7 @@ describe('Spider application', () => {
     cy.get('.wall').then(($wall) => {
       cy.get('.spider').should(($spider) => {
         const spiderTop = $spider.offset().top;
-        const spiderTopAbs = ($wall.innerHeight() / 2)
+        const expectedTopAbs = ($wall.innerHeight() / 2)
           + ($wall.offset().top + 10) - ($spider.height() / 2);
 
         expect(spiderTop).to.equal(spiderTopAbs);
