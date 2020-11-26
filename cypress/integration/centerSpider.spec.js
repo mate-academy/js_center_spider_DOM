@@ -12,7 +12,7 @@ describe('Spider application', () => {
         const expectedLeft = ($wall.innerWidth() / 2)
           + ($wall.offset().left + 10) - ($spider.width() / 2);
 
-        expect(spiderLeft).to.equal(spiderLeftAbs);
+        expect(spiderLeft).to.equal(expectedLeft);
       });
     });
   });
@@ -24,7 +24,7 @@ describe('Spider application', () => {
         const expectedTopAbs = ($wall.innerHeight() / 2)
           + ($wall.offset().top + 10) - ($spider.height() / 2);
 
-        expect(spiderTop).to.equal(spiderTopAbs);
+        expect(spiderTop).to.equal(expectedTopAbs);
       });
     });
   });
