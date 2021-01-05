@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Spider application', () => {
+describe(('Spider application'), () => {
   before(() => {
     cy.visit('/');
   });
