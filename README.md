@@ -16,4 +16,4 @@ Hints:
 - Spider image has `spider` class.
 
 It's an expected result of your job:
-![Result](./src/images/result.png)
+![Result](./src/images/result.png);
