@@ -1,3 +1,4 @@
 'use strict';
 
-document.querySelector('.spider').style.cssText = 'top: 50%; left: 50%; transform: translate(-50%, -50%)';
+document.querySelector('.spider')
+  .style.cssText = 'top: 50%; left: 50%; transform: translate(-50%, -50%)';
