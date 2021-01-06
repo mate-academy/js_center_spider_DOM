@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 2,
-    "start": "2021-01-06T08:33:14.502Z",
-    "end": "2021-01-06T08:33:23.335Z",
-    "duration": 8792,
+    "start": "2021-01-06T08:34:53.370Z",
+    "end": "2021-01-06T08:35:02.209Z",
+    "duration": 8797,
     "testsRegistered": 2,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ca61b4ec-4e00-4890-8308-649738ef8f20",
+      "uuid": "0eb53c3e-e87f-40f2-a03d-cf3d603bf3e1",
       "title": "",
       "fullFile": "cypress\\integration\\centerSpider.spec.js",
       "file": "cypress\\integration\\centerSpider.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "b05ed32c-cf4f-47ed-b645-47b240fc02cf",
+          "uuid": "2aea476e-d476-4174-a867-4adcf6a2e1f9",
           "title": "Spider application",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should center the spider by left border",
               "fullTitle": "Spider application should center the spider by left border",
               "timedOut": null,
-              "duration": 4500,
+              "duration": 4483,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying: expected 525 to equal 515\n    at Context.eval (http://localhost:8080/__cypress/tests?p=cypress\\integration\\centerSpider.spec.js:108:31)",
                 "diff": "- 525\n+ 515\n"
               },
-              "uuid": "01ab6851-f6b2-482d-91ed-cf6d75bcb2b2",
-              "parentUUID": "b05ed32c-cf4f-47ed-b645-47b240fc02cf",
+              "uuid": "6164ccbd-f12d-4192-bfc3-d72c3882830c",
+              "parentUUID": "2aea476e-d476-4174-a867-4adcf6a2e1f9",
               "isHook": false,
               "skipped": false
             },
@@ -60,7 +60,7 @@
               "title": "should center the spider by top border",
               "fullTitle": "Spider application should center the spider by top border",
               "timedOut": null,
-              "duration": 4292,
+              "duration": 4314,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -73,8 +73,8 @@
                 "estack": "AssertionError: Timed out retrying: expected 945 to equal 935\n    at Context.eval (http://localhost:8080/__cypress/tests?p=cypress\\integration\\centerSpider.spec.js:117:30)",
                 "diff": "- 945\n+ 935\n"
               },
-              "uuid": "d1aff1a0-a1d4-4f5b-8ea4-19ebc8c2c02f",
-              "parentUUID": "b05ed32c-cf4f-47ed-b645-47b240fc02cf",
+              "uuid": "a0f64fbf-5717-4361-a8b7-2f590f699667",
+              "parentUUID": "2aea476e-d476-4174-a867-4adcf6a2e1f9",
               "isHook": false,
               "skipped": false
             }
@@ -82,12 +82,12 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "01ab6851-f6b2-482d-91ed-cf6d75bcb2b2",
-            "d1aff1a0-a1d4-4f5b-8ea4-19ebc8c2c02f"
+            "6164ccbd-f12d-4192-bfc3-d72c3882830c",
+            "a0f64fbf-5717-4361-a8b7-2f590f699667"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 8792,
+          "duration": 8797,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
