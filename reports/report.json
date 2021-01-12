@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-01-12T00:37:32.160Z",
+    "end": "2021-01-12T00:37:38.087Z",
+    "duration": 5766,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ed987364-5274-4cef-a217-f6bf2497c0ec",
+      "title": "",
+      "fullFile": "cypress\\integration\\centerSpider.spec.js",
+      "file": "cypress\\integration\\centerSpider.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "32f2bbc2-6283-4cab-908c-50c3bfb83b27",
+          "title": "Spider application",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should center the spider by left border",
+              "fullTitle": "Spider application should center the spider by left border",
+              "timedOut": null,
+              "duration": 1277,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.wall').then(function ($wall) {\n  cy.get('.spider').should(function ($spider) {\n    var spider = $spider.get(0);\n    var wall = $wall.get(0);\n    var spiderLeft = spider.getBoundingClientRect().left;\n    var spiderLeftAbs = wall.clientWidth / 2 + (wall.offsetLeft + 10) - spider.width / 2;\n    expect(spiderLeft).to.equal(spiderLeftAbs);\n  });\n});",
+              "err": {},
+              "uuid": "cec3de41-2411-49f1-ba34-2c029e2c2fa4",
+              "parentUUID": "32f2bbc2-6283-4cab-908c-50c3bfb83b27",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should center the spider by top border",
+              "fullTitle": "Spider application should center the spider by top border",
+              "timedOut": null,
+              "duration": 4489,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.wall').then(function ($wall) {\n  cy.get('.spider').should(function ($spider) {\n    var spider = $spider.get(0);\n    var wall = $wall.get(0);\n    var spiderTop = spider.getBoundingClientRect().top;\n    var spiderTopAbs = wall.clientHeight / 2 + (wall.offsetTop + 10) - spider.height / 2;\n    expect(spiderTop).to.equal(expectedTopAbs);\n  });\n});",
+              "err": {
+                "message": "ReferenceError: Timed out retrying: expectedTopAbs is not defined",
+                "estack": "ReferenceError: Timed out retrying: expectedTopAbs is not defined\n    at Context.eval (http://localhost:8080/__cypress/tests?p=cypress\\integration\\centerSpider.spec.js:121:36)",
+                "diff": null
+              },
+              "uuid": "2983858b-84eb-40d1-a9a5-5f6ab545f7a0",
+              "parentUUID": "32f2bbc2-6283-4cab-908c-50c3bfb83b27",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cec3de41-2411-49f1-ba34-2c029e2c2fa4"
+          ],
+          "failures": [
+            "2983858b-84eb-40d1-a9a5-5f6ab545f7a0"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5766,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "raw_reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
