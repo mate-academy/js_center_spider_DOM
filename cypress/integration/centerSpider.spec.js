@@ -30,7 +30,7 @@ describe('Spider application', () => {
         const spiderTopAbs = (wall.clientHeight / 2) + (wall.offsetTop + 10)
           - (spider.height / 2);
 
-        expect(spiderTop).to.equal(expectedTopAbs);
+        expect(spiderTop).to.equal(spiderTopAbs);
       });
     });
   });
