@@ -9,5 +9,5 @@ const centerHeightOfWall = wall.clientHeight / 2;
 const centerHeightOfSpider = spider.clientHeight / 2;
 const centerWidthOfSpider = spider.clientWidth / 2;
 
-spider.style.left = `${centerWithOfWall - centerWidthOfSpider}px`;
-spider.style.top = `${centerHeightOfWall - centerHeightOfSpider}px`;
+spider.style.left = `${Math.ceil(centerWithOfWall - centerWidthOfSpider)}px`;
+spider.style.top = `${Math.ceil(centerHeightOfWall - centerHeightOfSpider)}px`;
