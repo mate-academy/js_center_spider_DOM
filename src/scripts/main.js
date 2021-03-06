@@ -12,9 +12,3 @@ spider.style.top = parseFloat(wallStyle.height) / 2
 
 spider.style.left = parseFloat(wallStyle.width) / 2
   - parseFloat(spiderStyle.width) / 2 + 'px';
-
-/* console.log(spider.style);
-console.log(wall.style);
-
-console.log(parseFloat(wallStyle.width));
-console.log(parseFloat(wallStyle.height)); */
