@@ -4,10 +4,14 @@ const spiderImg = document.querySelector('.spider');
 
 const wall = document.querySelector('.wall');
 
-wall.style.display = 'flex';
+const wallWidth = wall.clientWidth;
+const wallHeight = wall.clientHeight;
 
-wall.style.justifyContent = 'center';
+const spiderWidth = spiderImg.clientWidth;
+const spiderHeight = spiderImg.clientHeight;
 
-wall.style.alignItems = 'center';
+const centeredSpiderX = ((wallWidth - spiderWidth) / 2);
+const centeredSpiderY = ((wallHeight - spiderHeight) / 2);
 
-spiderImg.style.position = 'static';
+spiderImg.style.top = `${centeredSpiderY}px`;
+spiderImg.style.left = `${centeredSpiderX}px`;
