@@ -1,5 +1,5 @@
 1. Replace `<your_account>` with your Github username in the link
-    - [DEMO LINK](https://vania-white.github.io/js_center_spider_DOM/)
+    g
 2. Follow [this instructions](https://mate-academy.github.io/layout_task-guideline/)
     - There are no tests for this task so use `npm run lint` command instead of `npm test` 
 
