@@ -8,3 +8,8 @@ const center = `${((wallSize / 2) - (spiderSize / 2) - 10)}px`;
 
 spider.style.left = center;
 spider.style.top = center;
+
+// spider.style.position = 'relative';
+// wall.style.display = 'flex';
+// wall.style.justifyContent = 'center';
+// wall.style.alignItems = 'center';
