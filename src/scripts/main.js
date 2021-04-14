@@ -1,16 +1,16 @@
 'use strict';
 
-const sp = document.querySelector('.spider');
-const spS = getComputedStyle(sp);
+const spider = document.querySelector('.spider');
+const spiderStyles = getComputedStyle(spider);
 
-const spP = sp.parentNode;
-const spPS = getComputedStyle(spP);
+const spiderParent = spider.parentNode;
+const spiderParentStyles = getComputedStyle(spiderParent);
 
-const spSw = Number.parseFloat(spS.width);
-const spPSw = Number.parseFloat(spPS.width);
+const spiderWidth = Number.parseFloat(spiderStyles.width);
+const spiderParentWidth = Number.parseFloat(spiderParentStyles.width);
 
-const spSh = Number.parseFloat(spS.height);
-const spPSh = Number.parseFloat(spPS.height);
+const spiderHeight = Number.parseFloat(spiderStyles.height);
+const spiderParentHeight = Number.parseFloat(spiderParentStyles.height);
 
-sp.style.marginLeft = `${(spPSw - spSw) / 2}px`;
-sp.style.marginTop = `${(spPSh - spSh) / 2}px`;
+spider.style.marginLeft = `${(spiderParentWidth - spiderWidth) / 2}px`;
+spider.style.marginTop = `${(spiderParentHeight - spiderHeight) / 2}px`;
