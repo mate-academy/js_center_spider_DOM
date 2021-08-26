@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-26T15:34:13.929Z",
+    "end": "2021-08-26T15:34:15.142Z",
+    "duration": 1191,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5c319cc8-ad6d-4ecd-9802-07224f17b0a6",
+      "title": "",
+      "fullFile": "cypress\\integration\\centerSpider.spec.js",
+      "file": "cypress\\integration\\centerSpider.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "309e7c21-f6af-4153-a468-009ee4427879",
+          "title": "Spider application",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should center the spider by left border",
+              "fullTitle": "Spider application should center the spider by left border",
+              "timedOut": null,
+              "duration": 1177,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.wall').then(function ($wall) {\n  cy.get('.spider').should(function ($spider) {\n    var spiderLeft = $spider.offset().left;\n    var expectedLeft = $wall.innerWidth() / 2 + ($wall.offset().left + 10) - $spider.width() / 2;\n    expect(spiderLeft).to.equal(expectedLeft);\n  });\n});",
+              "err": {},
+              "uuid": "be748225-c68a-43d1-b14d-eb5d4c92a423",
+              "parentUUID": "309e7c21-f6af-4153-a468-009ee4427879",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should center the spider by top border",
+              "fullTitle": "Spider application should center the spider by top border",
+              "timedOut": null,
+              "duration": 14,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.wall').then(function ($wall) {\n  cy.get('.spider').should(function ($spider) {\n    var spiderTop = $spider.offset().top;\n    var expectedTopAbs = $wall.innerHeight() / 2 + ($wall.offset().top + 10) - $spider.height() / 2;\n    expect(spiderTop).to.equal(expectedTopAbs);\n  });\n});",
+              "err": {},
+              "uuid": "87833efb-b97e-46f2-a8de-52e435c86f36",
+              "parentUUID": "309e7c21-f6af-4153-a468-009ee4427879",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "be748225-c68a-43d1-b14d-eb5d4c92a423",
+            "87833efb-b97e-46f2-a8de-52e435c86f36"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1191,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "raw_reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
