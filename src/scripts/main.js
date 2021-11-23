@@ -2,7 +2,10 @@
 
 // write code here
 const spider = document.querySelector('.spider');
+const wall = document.querySelector('.wall');
 
-spider.style.top = '50%';
-spider.style.left = '50%';
-spider.style.transform = 'translate(-50%, -50%)';
+const coordsX = wall.clientWidth / 2;
+const coordsY = wall.clientHeight / 2;
+
+spider.style.left = `${coordsX - spider.offsetWidth / 2}px`;
+spider.style.top = `${coordsY - spider.offsetHeight / 2}px`;
