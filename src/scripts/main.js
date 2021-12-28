@@ -1,7 +1,13 @@
 'use strict';
 
 const spider = document.querySelector('.spider');
+const wall = document.querySelector('.wall');
 
-spider.style.top = '50%';
-spider.style.left = '50%';
-spider.style.transform = 'translate(-50%, -50%)';
+const cordW = wall.getBoundingClientRect();
+const cordS = spider.getBoundingClientRect();
+
+const topSp = cordW.height / 2 - cordS.height / 2;
+const leftSp = cordW.width / 2 - cordS.width / 2;
+
+spider.style.top = topSp + 'px';
+spider.style.left = leftSp + 'px';
