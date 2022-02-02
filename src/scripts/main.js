@@ -1,5 +1,7 @@
 'use strict';
 
 const spider = document.querySelector('.spider');
+const wall = document.querySelector('.wall');
 
-spider.style.cssText = 'margin: 50%; transform: translate3d(-50%, -50%, 0)';
+spider.style.left = `${wall.clientWidth / 2 - spider.offsetWidth / 2}px`;
+spider.style.top = `${wall.clientHeight / 2 - spider.offsetHeight / 2}px`;
