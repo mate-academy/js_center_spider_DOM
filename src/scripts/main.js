@@ -16,5 +16,7 @@ const spiderLeftPosition = parseFloat(wallElem.clientWidth) / 2
 - parseFloat(spiderElem.offsetWidth) / 2;
 
 spiderElem.style.top = `${spiderTopPosition}px`;
+// all calculations could be placed right here
 
 spiderElem.style.left = `${spiderLeftPosition}px`;
+// all calculations could be placed right here
