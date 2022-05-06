@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2022-05-06T13:35:49.445Z",
+    "end": "2022-05-06T13:35:58.498Z",
+    "duration": 8956,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "21e75c75-5c81-4082-970b-898c37d35ba1",
+      "title": "",
+      "fullFile": "cypress\\integration\\centerSpider.spec.js",
+      "file": "cypress\\integration\\centerSpider.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6f314c9c-a051-4c7c-a4f7-e102a40e5070",
+          "title": "Spider application",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should center the spider by left border",
+              "fullTitle": "Spider application should center the spider by left border",
+              "timedOut": null,
+              "duration": 4586,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.wall').then(function ($wall) {\n  cy.get('.spider').should(function ($spider) {\n    var spiderLeft = $spider.offset().left;\n    var expectedLeft = $wall.innerWidth() / 2 + ($wall.offset().left + 10) - $spider.width() / 2;\n    expect(spiderLeft).to.equal(expectedLeft);\n  });\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying: expected 525 to equal 515",
+                "estack": "AssertionError: Timed out retrying: expected 525 to equal 515\n    at Context.eval (http://localhost:8080/__cypress/tests?p=cypress\\integration\\centerSpider.spec.js:108:31)",
+                "diff": "- 525\n+ 515\n"
+              },
+              "uuid": "f5ce4635-81f2-417e-a39c-37bb0f4f2ccd",
+              "parentUUID": "6f314c9c-a051-4c7c-a4f7-e102a40e5070",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should center the spider by top border",
+              "fullTitle": "Spider application should center the spider by top border",
+              "timedOut": null,
+              "duration": 4370,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.wall').then(function ($wall) {\n  cy.get('.spider').should(function ($spider) {\n    var spiderTop = $spider.offset().top;\n    var expectedTopAbs = $wall.innerHeight() / 2 + ($wall.offset().top + 10) - $spider.height() / 2;\n    expect(spiderTop).to.equal(expectedTopAbs);\n  });\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying: expected 945 to equal 935",
+                "estack": "AssertionError: Timed out retrying: expected 945 to equal 935\n    at Context.eval (http://localhost:8080/__cypress/tests?p=cypress\\integration\\centerSpider.spec.js:117:30)",
+                "diff": "- 945\n+ 935\n"
+              },
+              "uuid": "10aed2b9-c455-4a41-943f-a9cddd974a02",
+              "parentUUID": "6f314c9c-a051-4c7c-a4f7-e102a40e5070",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f5ce4635-81f2-417e-a39c-37bb0f4f2ccd",
+            "10aed2b9-c455-4a41-943f-a9cddd974a02"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 8956,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "raw_reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
