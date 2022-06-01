@@ -1,7 +1,7 @@
 'use strict';
 
-const wall = document.querySelector('[class = wall]');
-const spider = document.querySelector('[class = spider]');
+const wall = document.querySelector('.wall');
+const spider = document.querySelector('.spider');
 
 const spiderHeight = spider.offsetHeight;
 
