@@ -1,3 +1,5 @@
 'use strict';
+const spider = document.querySelector('.spider');
 
-// write code here
+spider.style.top = '45%';
+spider.style.left = '45%';
