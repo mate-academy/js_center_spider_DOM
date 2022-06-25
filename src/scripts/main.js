@@ -2,5 +2,4 @@
 
 const spider = document.querySelector('.spider');
 
-spider.style.top = '45%';
-spider.style.left = '45%';
+spider.style.cssText = 'top: 50%; left: 50%; transform: translate(-50%, -50%)';
