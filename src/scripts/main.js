@@ -9,6 +9,6 @@ function setChildrenOnCenter(fatherElement, children) {
 }
 
 const wall = document.querySelector('.wall');
-const spyder = document.querySelector('.spider');
+const spider = document.querySelector('.spider');
 
 setChildrenOnCenter(wall, spyder);
