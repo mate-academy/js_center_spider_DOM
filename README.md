@@ -1,5 +1,7 @@
 1. Replace `<your_account>` with your Github username in the link
-    - [DEMO LINK](https://<your_account>.github.io/js_center_spider_DOM/)
+    - [DEMO LINK](https://Andreyb1985.github.io/js_center_spider_DOM/)
+    - [TEST REPORT LINK](https://Andreyb1985.github.io/js_center_spider_DOM/report/html_report/)
+
 2. Follow [this instructions](https://mate-academy.github.io/layout_task-guideline/)
     - There are no tests for this task so use `npm run lint` command instead of `npm test` 
 
@@ -7,7 +9,7 @@
 
 ![Preview](./src/images/preview.png)
 
-Your task: Center the spider using only JavaScript. Yes, it task can be easily done with pure CSS, but not now. Do it with JS.
+Your task: Center the spider using only JavaScript. Yes, it task can be easily done with pure CSS, but not now. Do it with JS
 
 You no need to write any styles or HTML code in this task. Change only `main.js` file.
 
