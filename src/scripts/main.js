@@ -2,6 +2,6 @@
 
 const spider = document.querySelector('.spider');
 
-spider.style.bottom = '0';
-spider.style.right = '0';
-spider.style.margin = 'auto';
+spider.style.top = '50%';
+spider.style.left = '50%';
+spider.style.transform = 'translate(-50%, -50%)';
