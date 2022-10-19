@@ -1,7 +1,7 @@
 'use strict';
 
-const body = document.querySelector('body .wall .spider');
+const spider = document.querySelector('.spider');
 
-body.style.top = '50%';
-body.style.left = '50%';
-body.style.transform = 'translateX(-50%)translateY(-50%)';
+spider.style.top = '50%';
+spider.style.left = '50%';
+spider.style.transform = 'translate(-50%, -50%)';
