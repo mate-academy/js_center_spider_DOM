@@ -1,11 +1,8 @@
 'use strict';
 
 const wall = document.querySelector('.wall');
-
-const styleWall = getComputedStyle(wall);
-
 const spider = document.querySelector('.spider');
-
+const styleWall = getComputedStyle(wall);
 const styleSpider = getComputedStyle(spider);
 
 spider.style.top = `${(parseFloat(styleWall.width) / 2)
