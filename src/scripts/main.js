@@ -1,7 +1,15 @@
 'use strict';
 
 const spyder = document.querySelector('.spider');
+const wall = document.querySelector('.wall');
 
-spyder.style.transform = 'translate(-50%, -50%)';
-spyder.style.top = '50%';
-spyder.style.left = '50%';
+const spyderHight = spyder.offsetHeight;
+const spyderWidth = spyder.offsetWidth;
+const wallHight = wall.clientHeight;
+const wallWidth = wall.clientWidth;
+
+spyder.style.top = `${wallHight / 2}px`;
+spyder.style.left = `${wallWidth / 2}px`;
+
+spyder.style.transform
+= `translate(-${spyderWidth / 2}px, -${spyderHight / 2}px)`;
