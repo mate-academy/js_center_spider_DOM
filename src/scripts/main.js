@@ -4,7 +4,7 @@ const spider = document.querySelector('.spider');
 const wall = spider.offsetParent;
 
 const coordinates = function(
-  offsets = 'offsetWidth',
+  offsets = 'clientWidth',
   firstEl = wall,
   secondEl = spider) {
   const divinity = (offset = offsets, numb = 2) => {
@@ -13,7 +13,7 @@ const coordinates = function(
 
   return {
     x: `${divinity()}px`,
-    y: `${divinity('offsetHeight')}px`,
+    y: `${divinity('clientHeight')}px`,
   };
 };
 
