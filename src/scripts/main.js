@@ -1,3 +1,7 @@
 'use strict';
 
-// write code here
+const field = document.querySelector('.wall');
+const spider = document.querySelector('.spider');
+
+spider.style.top = (field.clientHeight - spider.clientHeight) / 2 + 'px';
+spider.style.left = (field.clientWidth - spider.clientWidth) / 2 + 'px';
