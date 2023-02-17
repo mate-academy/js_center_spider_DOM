@@ -3,5 +3,5 @@
 const element = document.querySelector('.spider');
 
 element.style.margin = 'auto';
-element.style.bottom = '0px';
-element.style.right = '0px';
+element.style.bottom = '0';
+element.style.right = '0';
