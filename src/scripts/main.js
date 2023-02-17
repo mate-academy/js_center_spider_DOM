@@ -1,12 +1,10 @@
 'use strict';
 
 const wall = document.querySelector('.wall');
-const style = getComputedStyle(wall);
 const spider = document.querySelector('.spider');
-const styleSpider = getComputedStyle(spider);
-const width = parseFloat(style.width);
-const height = parseFloat(style.height);
-const widthSpider = parseFloat(styleSpider.width);
+const width = wall.clientWidth;
+const height = wall.clientHeight;
+const widthSpider = spider.clientWidth;
 
-spider.style.top = height / 2 - widthSpider / 2 + 'px';
-spider.style.left = width / 2 - widthSpider / 2 + 'px';
+spider.style.top = (height - widthSpider) / 2 + 'px';
+spider.style.left = (width - widthSpider) / 2 + 'px';
