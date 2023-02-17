@@ -2,6 +2,4 @@
 
 const element = document.querySelector('.spider');
 
-element.style.margin = 'auto';
-element.style.bottom = '0';
-element.style.right = '0';
+element.style.cssText += ('margin: auto; bottom: 0; right: 0;');
