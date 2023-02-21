@@ -7,7 +7,6 @@ const coordTop = (wall.getBoundingClientRect().height / 2)
 const coordLeft = (wall.getBoundingClientRect().width / 2)
 - (spider.getBoundingClientRect().width / 2) - 10;
 
-wall.style.boxSizing = 'border-box';
 spider.style.boxSizing = 'border-box';
 spider.style.top = `${coordTop}px`;
 spider.style.left = `${coordLeft}px`;
