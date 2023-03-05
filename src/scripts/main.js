@@ -7,8 +7,8 @@ const spiderHeight = spiderImg.offsetHeight;
 
 const field = document.querySelector('.wall');
 
-const fieldWidth = field.offsetWidth;
-const fieldHeight = field.offsetHeight;
+const fieldWidth = field.clientWidth;
+const fieldHeight = field.clientHeight;
 
 const x = (fieldWidth - spiderWidth) / 2;
 const y = (fieldHeight - spiderHeight) / 2;
