@@ -1,12 +1,11 @@
 'use strict';
 
-const wallImage = document.querySelector('div.wall');
+const spider = document.querySelector('.spider');
 
-wallImage.style.display = 'flex';
-wallImage.style.alignItems = 'center';
-wallImage.style.justifyContent = 'center';
-wallImage.children[0].style.position = 'unset';
+spider.style.top = `${
+  (spider.offsetParent.clientHeight - spider.clientHeight) / 2
+}px`;
 
-// document.querySelector('img').style.top = '175px';
-// document.querySelector('img').style.left = '175px';
-// extra short variant;
+spider.style.left = `${
+  (spider.offsetParent.clientWidth - spider.clientWidth) / 2
+}px`;
