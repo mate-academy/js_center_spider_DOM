@@ -14,6 +14,7 @@ You no need to write any styles or HTML code in this task. Change only `main.js`
 Hints: 
 - Field has `wall` class.
 - Spider image has `spider` class.
+- Use DOM element's properties for calculating spider position.
 
 It's an expected result of your job:
 ![Result](./src/images/result.png)
