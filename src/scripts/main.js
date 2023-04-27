@@ -1,16 +1,18 @@
 'use strict';
 
+function createAndGerStyle(element) {
+  const styleElement = getComputedStyle(element);
+  const widthElement = parseFloat(styleElement.width);
+  const heightElement = parseFloat(styleElement.height);
+
+  return [widthElement, heightElement];
+}
+
 const wall = document.querySelector('.wall');
-
-const styleWall = getComputedStyle(wall);
-const widthWall = parseFloat(styleWall.width);
-const heightWall = parseFloat(styleWall.height);
-
 const spider = document.querySelector('.spider');
 
-const styleSpider = getComputedStyle(spider);
-const widthSpider = parseFloat(styleSpider.width);
-const heightSpider = parseFloat(styleSpider.height);
+const [widthWall, heightWall] = createAndGerStyle(wall);
+const [widthSpider, heightSpider] = createAndGerStyle(spider);
 
 spider.style.top = `${heightWall / 2 - heightSpider / 2}px`;
 spider.style.left = `${widthWall / 2 - widthSpider / 2}px`;
