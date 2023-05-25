@@ -2,12 +2,10 @@
 
 const divElem = document.querySelector('.wall');
 const spiderElem = document.querySelector('.spider');
-
-const wigthDivElem = divElem.clientWidth;
+const widthDivElem = divElem.clientWidth;
 const heightDivElem = divElem.clientHeight;
+const widthSpiderElem = spiderElem.clientWidth;
+const heightSpiderElem = spiderElem.clientHeight;
 
-const wigthSpiderElem = spiderElem.clientWidth;
-const heighSpiderElem = spiderElem.clientHeight;
-
-spiderElem.style.top = `${(heightDivElem - heighSpiderElem) / 2}px`;
-spiderElem.style.left = `${(wigthDivElem - wigthSpiderElem) / 2}px`;
+spiderElem.style.top = `${(heightDivElem - heightSpiderElem) / 2}px`;
+spiderElem.style.left = `${(widthDivElem - widthSpiderElem) / 2}px`;
