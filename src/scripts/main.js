@@ -3,10 +3,8 @@
 const spider = document.querySelector('.spider');
 const wall = document.querySelector('.wall');
 
-spider.style.position = 'static';
-spider.style.display = 'flex';
-spider.style.justifyContent = 'center';
-spider.style.alignItems = 'center';
-wall.style.display = 'flex';
-wall.style.alignItems = 'center';
-wall.style.justifyContent = 'center';
+const coordX = (wall.clientWidth - spider.clientWidth) / 2;
+const coordY = (wall.clientHeight - spider.clientHeight) / 2;
+
+spider.style.left = `${coordX}px`;
+spider.style.top = `${coordY}px`;
