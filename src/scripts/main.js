@@ -3,8 +3,11 @@
 const divElem = document.querySelector('.wall');
 const spiderElem = document.querySelector('.spider');
 
-const wigthdivElem = divElem.clientWidth;
-const heightdivElem = divElem.clientHeight;
+const wigthDivElem = divElem.clientWidth;
+const heightDivElem = divElem.clientHeight;
 
-spiderElem.style.top = `${heightdivElem * 0.5 - 25}px`;
-spiderElem.style.left = `${wigthdivElem * 0.5 - 25}px`;
+const wigthSpiderElem = spiderElem.clientWidth;
+const heighSpiderElem = spiderElem.clientHeight;
+
+spiderElem.style.top = `${(heightDivElem - heighSpiderElem) / 2}px`;
+spiderElem.style.left = `${(wigthDivElem - wigthSpiderElem) / 2}px`;
