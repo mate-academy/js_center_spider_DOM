@@ -4,12 +4,12 @@ const wall = document.querySelector('.wall');
 
 const spider = document.querySelector('.spider');
 
-const weightWall = wall.offsetWidth;
-const heightWall = wall.offsetHeight;
+const weightWall = wall.clientWidth / 2;
+const heightWall = wall.clientHeight / 2;
 
-const weightSpider = spider.offsetWidth;
-const heightSpider = spider.offsetHeight;
+const weightSpider = spider.clientWidth / 2;
+const heightSpider = spider.clientHeight / 2;
 
-spider.style.top = `${(weightWall - weightSpider) / 2}px`;
+spider.style.top = `${weightWall - weightSpider}px`;
 
-spider.style.left = `${(heightWall - heightSpider) / 2}px`;
+spider.style.left = `${heightWall - heightSpider}px`;
