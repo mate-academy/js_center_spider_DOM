@@ -1,3 +1,5 @@
 'use strict';
 
-// write code here
+const spiderElement = document.querySelector('.spider');
+
+spiderElement.style.margin = `${45}%`;
