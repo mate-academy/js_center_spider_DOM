@@ -1,5 +1,11 @@
 'use strict';
 
-const spiderElement = document.querySelector('.spider');
+const wallElement = document.querySelector('.wall');
+wallElement.style.position = 'relative';
 
-spiderElement.style.transform = 'translate(175px, 175px)';
+const spiderElement = document.querySelector('.spider');
+spiderElement.style.position = 'absolute';
+spiderElement.style.top = '45%';
+spiderElement.style.left = '45%';
+
+spiderElement.style.transform = 'translate(-50%; -50%)';
