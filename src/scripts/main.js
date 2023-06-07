@@ -1,4 +1,5 @@
 'use strict';
+
 const spiderElement = document.querySelector('.spider');
 
 spiderElement.style.position = 'absolute';
