@@ -1,6 +1,6 @@
 'use strict';
 
-const field = document.querySelector('.field');
+const field = document.querySelector('.wall');
 const fieldWidth = field.clientWidth;
 const fieldHeight = field.clientHeight;
 
