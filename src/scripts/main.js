@@ -9,6 +9,6 @@ const horizontalPosition = (wall.clientWidth - spider.clientWidth) / 2;
 
 spider.style.left = horizontalPosition + 'px';
 
-const verticallyPosition = (wall.clientHeight - spider.clientHeight) / 2;
+const verticallyPosition = horizontalPosition;
 
 spider.style.top = verticallyPosition + 'px';
