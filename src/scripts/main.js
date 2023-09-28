@@ -5,10 +5,6 @@
 const wall = document.querySelector('.wall');
 const spider = document.querySelector('.spider');
 
-const horizontalPosition = (wall.clientWidth - spider.clientWidth) / 2;
+const bothPosition = (wall.clientWidth - spider.clientWidth) / 2;
 
-spider.style.left = horizontalPosition + 'px';
-
-const verticallyPosition = horizontalPosition;
-
-spider.style.top = verticallyPosition + 'px';
+spider.style.left = spider.style.top = bothPosition + 'px';
