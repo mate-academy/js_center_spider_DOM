@@ -1,8 +1,10 @@
 'use strict';
 
-const WALL = document.querySelector('.wall');
-const SPIDER = document.querySelector('.spider');
+const wall = document.querySelector('.wall');
+const spider = document.querySelector('.spider');
 
-WALL.style.position = 'relative';
-SPIDER.style.top = '44%';
-SPIDER.style.left = '44%';
+const y = (spider.clientHeight - wall.clientHeight) / 2;
+const x = (spider.clientWidth - wall.clientWidth) / 2;
+
+spider.style.top = `${y}px`;
+spider.style.left = `${x}px`;
