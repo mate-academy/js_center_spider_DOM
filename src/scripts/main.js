@@ -8,14 +8,8 @@ const centerY = (wall.clientHeight - spider.clientHeight) / 2;
 
 spider.style.left = `${centerX}px`;
 spider.style.top = `${centerY}px`;
-// const wall = document.querySelector('.wall');
 // const spider = document.querySelector('.spider');
 
-// const wallRect = wall.getBoundingClientRect();
-// const spiderRect = spider.getBoundingClientRect();
-
-// const centerX = (wallRect.width - spiderRect.width) / 2;
-// const centerY = (wallRect.height - spiderRect.height) / 2;
-
-// spider.style.left = `${centerX}px`;
-// spider.style.top = `${centerY}px`;
+// spider.style.transform = 'translate(-50%, -50%)';
+// spider.style.left = '50%';
+// spider.style.top = '50%';
