@@ -10,6 +10,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const centerX = (wallRect.width - spiderRect.width) / 2;
   const centerY = (wallRect.height - spiderRect.height) / 2;
 
-  spider.style.left = `${centerX}px`;
-  spider.style.top = `${centerY}px`;
+  spider.style.left = `${centerX - 10}px`;
+  spider.style.top = `${centerY - 10}px`;
 });
