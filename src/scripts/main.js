@@ -2,17 +2,17 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const wall = document.querySelector('.wall');
-
   const spider = document.querySelector('.spider');
 
   wall.style.position = 'relative';
 
-  const wallDef = wall.getBoundingClientRect();
-  const spiderDef = spider.getBoundingClientRect();
+  const wallRect = wall.getBoundingClientRect();
+  const spiderRect = spider.getBoundingClientRect();
 
-  const spiderTop = (wallDef.height - spiderDef.height) / 2;
+  const borderWidth = parseInt(window.getComputedStyle(wall).borderWidth);
 
-  const spiderLeft = (wallDef.width - spiderDef.width) / 2;
+  const spiderTop = (wallRect.height - spiderRect.height) / 2 - borderWidth;
+  const spiderLeft = (wallRect.width - spiderRect.width) / 2 - borderWidth;
 
   spider.style.position = 'absolute';
   spider.style.top = `${spiderTop}px`;
