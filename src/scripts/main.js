@@ -1,3 +1,19 @@
 'use strict';
 
 // write code here
+
+const documentElement = (className) => {
+    return document.querySelector(className);
+}
+
+const wall = documentElement('.wall');
+const spider = documentElement('.spider');
+
+const wallHeight = wall.clientHeight;
+const wallWidth = wall.clientWidth; 
+
+const spiderHeight = spider.clientHeight; 
+const spiderWidth = spider.clientHeight; 
+
+spider.style.top = `${(wallHeight / 2) - (spiderHeight / 2)}px`;
+spider.style.left = `${(wallWidth / 2) - (spiderHeight / 2)}px`;
