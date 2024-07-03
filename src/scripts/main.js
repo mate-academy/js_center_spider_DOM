@@ -3,12 +3,13 @@
 const wall = document.querySelector('.wall');
 const spider = document.querySelector('.spider');
 
-const wallRect = wall.getBoundingClientRect();
-const spiderRect = spider.getBoundingClientRect();
+const wallWidth = wall.clientWidth;
+const wallHeight = wall.clientHeight;
+const spiderWidth = spider.clientWidth;
+const spiderHeight = spider.clientHeight;
 
-const X = (wallRect.width - spiderRect.width) / 2;
-const Y = (wallRect.height - spiderRect.height) / 2;
+const topp = (wallHeight - spiderHeight) / 2;
+const left = (wallWidth - spiderWidth) / 2;
 
-spider.style.position = 'absolute';
-spider.style.left = `${X}px`;
-spider.style.top = `${Y}px`;
+spider.style.top = `${topp}px`;
+spider.style.left = `${left}px`;
