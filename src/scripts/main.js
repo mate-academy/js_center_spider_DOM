@@ -1,7 +1,6 @@
 'use strict';
 
 const elementSpider = document.querySelector('.spider');
-const elementWall = document.querySelector('.wall');
 
 elementSpider.style.position = 'absolute';
 
