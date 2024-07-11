@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const spiderHeight = spiderRect.height;
 
     const spiderLeft = (wallWidth - spiderWidth) / 2;
-    const spiderTop = (wallHeight - spiderHeight) / 2;
+    const spiderTop = (wallHeight - spiderHeight) / 2 - 10;
 
     spider.style.position = 'absolute';
     spider.style.left = `${spiderLeft}px`;
