@@ -1,8 +1,6 @@
 'use strict';
 
-const div = document.querySelector('.wall');
-const img = document.querySelector('.spider');
-const center = div.clientWidth / 2 - img.offsetWidth / 2;
-
-img.style.top = `${center}px`;
-img.style.left = `${center}px`;
+const spider = document.querySelector('.spider');
+spider.style.top = '50%';
+spider.style.left = '50%';
+spider.style.transform = 'translate(-50%, -50%)';
