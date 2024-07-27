@@ -1,20 +1,11 @@
 'use strict';
 
-const spider = document.querySelector('.spider');
 const wall = document.querySelector('.wall');
 
-function centerSpider() {
-  const spiderRect = spider.getBoundingClientRect();
-  const wallRect = wall.getBoundingClientRect();
+wall.style.display = 'flex';
+wall.style.justifyContent = 'center';
+wall.style.alignItems = 'center';
 
-  const topPosition = (wallRect.height - spiderRect.height) / 2;
-  const left = (wallRect.width - spiderRect.width) / 2;
+const spider = document.querySelector('.spider');
 
-  spider.style.position = 'apsolut';
-  spider.style.left = `${left}px`;
-  spider.style.top = `${topPosition}px`;
-}
-
-centerSpider();
-
-window.addEventListener('resize', centerSpider);
+spider.style.position = 'relative';
