@@ -2,5 +2,8 @@
 
 const spider = document.getElementsByClassName('spider')[0];
 
-spider.style.top = '175px';
-spider.style.left = '175px';
+Object.assign(spider.style, {
+  left: '50%',
+  top: '50%',
+  transform: 'translate(-50%, -50%)',
+});
