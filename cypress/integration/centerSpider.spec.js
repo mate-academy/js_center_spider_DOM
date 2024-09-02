@@ -1,7 +1,7 @@
 'use strict';
 
 describe('Spider application', () => {
-  before(() => {
+  beforeEach(() => {
     cy.visit('/');
   });
 
