@@ -1,5 +1,5 @@
 1. Replace `<your_account>` with your Github username in the link
-    - [DEMO LINK](https://<your_account>.github.io/js_center_spider_DOM/)
+    - [DEMO LINK](https://sasha39612.github.io/js_center_spider_DOM/)
 2. Follow [this instructions](https://mate-academy.github.io/layout_task-guideline/)
     - There are no tests for this task so use `npm run lint` command instead of `npm test` 
 
@@ -17,4 +17,4 @@ Hints:
 - Use DOM element's properties for calculating spider position.
 
 It's an expected result of your job:
-![Result](./src/images/result.png)
+![Result](./src/images/result.png);
