@@ -23,7 +23,6 @@ describe('Spider application', () => {
         const spiderTop = $spider.offset().top;
         const expectedTopAbs = ($wall.innerHeight() / 2)
           + ($wall.offset().top + 10) - ($spider.height() / 2);
-
         expect(spiderTop).to.equal(expectedTopAbs);
       });
     });
