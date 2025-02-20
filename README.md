@@ -1,20 +1,30 @@
-1. Replace `<your_account>` with your Github username in the link
-    - [DEMO LINK](https://<your_account>.github.io/js_center_spider_DOM/)
-2. Follow [this instructions](https://mate-academy.github.io/layout_task-guideline/)
-    - There are no tests for this task so use `npm run lint` command instead of `npm test` 
+# Center the Spider
 
-### Task: Center the spider
+## 🎮 About the Project
+This project centers a spider element using only JavaScript, without relying on CSS positioning. It demonstrates how to manipulate the DOM effectively to achieve precise positioning.
 
-![Preview](./src/images/preview.png)
+## 🚀 Tech Stack
+- **HTML** (BEM methodology for structured markup)
+- **CSS** (For basic styling)
+- **JavaScript** (Handles element positioning logic)
 
-Your task: Center the spider using only JavaScript. Yes, it task can be easily done with pure CSS, but not now. Do it with JS.
+## 🛠️ Tools & Dependencies
+- **ESLint** – Ensuring code quality  
+- **Prettier** – Code formatting for readability  
+- **Cypress** – End-to-end testing  
+- **Mochawesome** – Test reporting  
+- **Parcel** – Web application bundler  
 
-You no need to write any styles or HTML code in this task. Change only `main.js` file.
+## 📌 Features
+✅ Сenters the spider using JavaScript  
+✅ No CSS positioning involved  
+✅ Works on different screen sizes  
 
-Hints: 
-- Field has `wall` class.
-- Spider image has `spider` class.
-- Use DOM element's properties for calculating spider position.
+## 🌐 Demo
+🔗 [Live Demo](https://AndriiZakharenko.github.io/center-spider/)
 
-It's an expected result of your job:
-![Result](./src/images/result.png)
+## 📸 Reference Image  
+<img src="./src/images/preview.png" alt="reference image" width="300px" />
+
+## 📜 License
+This project is forked from 💻 [Mate Academy](https://github.com/mate-academy/js_center_spider_DOM)
