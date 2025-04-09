@@ -1,6 +1,6 @@
 'use strict';
 
-document.addEventListener('DOMContentLoader', () => {
+document.addEventListener('DOMContentLoaded ', () => {
   const wall = document.querySelector('.wall');
   const spider = document.querySelector('.spider');
 
