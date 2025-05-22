@@ -15,7 +15,7 @@ const spider = document.querySelector('.spider');
 // spider.style.top = wallHeight / 2 - spiderHeigth / 2 + 'px';
 // spider.style.left = wallWidth / 2 - spiderWidth / 2 + 'px';
 
-// spider.style.position = 'static';
+spider.style.position = 'static';
 
 wall.style.display = 'flex';
 wall.style.justifyContent = 'center';
