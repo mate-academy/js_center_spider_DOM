@@ -1,6 +1,11 @@
 'use strict';
 
 // write code here
+const wall = document.querySelector('.wall');
 const spider = document.querySelector('.spider');
 
-spider.style.margin = '175px';
+wall.style.display = 'flex';
+wall.style.justifyContent = 'center';
+wall.style.alignItems = 'center';
+
+spider.style.position = 'relative';
