@@ -11,4 +11,5 @@ const padLeft =
 const spider = document.querySelector('.spider');
 
 spider.style.top = `${padTop}px`;
+
 spider.style.left = `${padLeft}px`;
