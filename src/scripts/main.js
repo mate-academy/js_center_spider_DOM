@@ -5,8 +5,8 @@ const spider = document.querySelector('.spider');
 
 spider.style.position = 'absolute';
 
-const centerX = (wall.clientWidth - spider.width) / 2;
-const centerY = (wall.clientHeight - spider.height) / 2;
+const centerX = (wall.clientWidth - spider.offsetWidth) / 2;
+const centerY = (wall.clientHeight - spider.offsetHeight) / 2;
 
 spider.style.left = centerX + 'px';
 spider.style.top = centerY + 'px';
