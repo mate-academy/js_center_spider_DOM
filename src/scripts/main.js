@@ -1,18 +1,27 @@
 'use strict';
 
+function spiderPosition(element, container) {
+  // Проверка наличия элементов
+  if (!element || !container) {
+    return;
+  }
+
+  // Получение размеров
+  const { clientHeight: cH, clientWidth: cW } = container;
+  const { clientHeight: eH, clientWidth: eW } = element;
+
+  // Вычисление центра
+  const topPos = (cH - eH) / 2;
+  const leftPos = (cW - eW) / 2;
+
+  // Установка стилей
+  container.style.position = 'relative';
+  element.style.position = 'absolute';
+  element.style.top = `${topPos}px`;
+  element.style.left = `${leftPos}px`;
+}
+
 const wall = document.querySelector('.wall');
 const spider = document.querySelector('.spider');
 
-// Получение размеров
-const wallHeight = wall.clientHeight;
-const wallWidth = wall.clientWidth;
-const spiderHeight = spider.clientHeight;
-const spiderWidth = spider.clientWidth;
-
-// Вычисление центра
-const spiderTop = (wallHeight - spiderHeight) / 2;
-const spiderLeft = (wallWidth - spiderWidth) / 2;
-
-// Установка стилей
-spider.style.top = `${spiderTop}px`;
-spider.style.left = `${spiderLeft}px`;
+spiderPosition(spider, wall);
