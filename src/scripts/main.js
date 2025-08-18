@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const centerSpider = () => {
     wall.style.position = 'relative';
-    spider.style.position = 'absolution';
+    spider.style.position = 'absolute';
 
     const cw = wall.clientWidth;
     const ch = wall.clientHeight;
