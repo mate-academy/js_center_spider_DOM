@@ -1,9 +1,9 @@
 'use strict';
 
-function centreSpider() {
-  const plate = document.querySelector('.wall');
-  const plateSpider = document.querySelector('.spider');
+const plate = document.querySelector('.wall');
+const plateSpider = document.querySelector('.spider');
 
+function centreSpider() {
   if (!plate || !plateSpider) {
     return;
   }
@@ -21,4 +21,11 @@ function centreSpider() {
   plateSpider.style.left = Math.round((plateWidth - spiderWidth) / 2) + 'px';
 }
 
-centreSpider();
+document.addEventListener('DOMContentLoaded', () => {
+  if (plateSpider.complete) {
+    centreSpider();
+    window.addEventListener('resize', centreSpider);
+  } else {
+    plateSpider.addEventListener('load', centreSpider);
+  }
+});
