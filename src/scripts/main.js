@@ -4,9 +4,8 @@ const spider = document.querySelector('.spider');
 
 const wall = document.querySelector('.wall');
 
-wall.style.position = 'relative';
-spider.style.position = 'absolute';
+const leftStyle = (wall.clientWidth - spider.offsetWidth) / 2;
+const topStyle = (wall.clientHeight - spider.offsetHeight) / 2;
 
-spider.style.top = '50%';
-spider.style.left = '50%';
-spider.style.transform = 'translate(-50%, -50%)';
+spider.style.left = leftStyle + 'px';
+spider.style.top = topStyle + 'px';
