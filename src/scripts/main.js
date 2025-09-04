@@ -1,18 +1,28 @@
 'use strict';
 
 // write code here
-const wall = document.querySelector('.wall');
-const spider = document.querySelector('.spider');
+document.addEventListener('DOMContentLoaded', () => {
+  const wall = document.querySelector('.wall');
+  const spider = document.querySelector('.spider');
 
-const wallWeight = wall.clientWidth;
-const wallHeight = wall.clientHeight;
+  if (wall && spider) {
+    const wallPosition = window.getComputedStyle(wall).position;
 
-const spiderWeight = spider.offsetWidth;
-const spiderHeight = spider.offsetHeight;
+    if (wallPosition === 'static') {
+      wall.style.position = 'relative';
+    }
 
-const posLeft = (wallWeight - spiderWeight) / 2;
-const posTop = (wallHeight - spiderHeight) / 2;
+    const wallWidth = wall.clientWidth;
+    const wallHeight = wall.clientHeight;
 
-spider.style.position = 'absolute';
-spider.style.left = posLeft + 'px';
-spider.style.top = posTop + 'px';
+    const spiderWidth = spider.offsetWidth;
+    const spiderHeight = spider.offsetHeight;
+
+    const posLeft = (wallWidth - spiderWidth) / 2;
+    const posTop = (wallHeight - spiderHeight) / 2;
+
+    spider.style.position = 'absolute';
+    spider.style.left = posLeft + 'px';
+    spider.style.top = posTop + 'px';
+  }
+});
