@@ -4,15 +4,44 @@ document.addEventListener('DOMContentLoaded', () => {
   const wall = document.querySelector('.wall');
   const spider = document.querySelector('.spider');
 
-  const wallWidth = wall.clientWidth;
-  const wallHeight = wall.clientHeight;
+  if (!wall) {
+    // eslint-disable-next-line no-console
+    console.error('`.wall` element not found');
 
-  const spiderWidth = spider.clientWidth;
-  const spiderHeight = spider.clientHeight;
+    return;
+  }
 
-  const left = (wallWidth - spiderWidth) / 2;
-  const up = (wallHeight - spiderHeight) / 2;
+  if (!spider) {
+    // eslint-disable-next-line no-console
+    console.error('`.spider` element not found');
 
-  spider.style.left = `${left}px`;
-  spider.style.top = `${up}px`;
+    return;
+  }
+
+  if (getComputedStyle(wall).position === 'static') {
+    wall.style.position = 'relative';
+  }
+
+  function measureAndCenter() {
+    const wallWidth = wall.clientWidth;
+    const wallHeight = wall.clientHeight;
+
+    const spiderWidth = spider.offsetWidth;
+    const spiderHeight = spider.offsetHeight;
+
+    const leftPos = (wallWidth - spiderWidth) / 2;
+    const topPos = (wallHeight - spiderHeight) / 2;
+
+    spider.style.position = 'absolute';
+    spider.style.left = `${leftPos}px`;
+    spider.style.top = `${topPos}px`;
+  }
+
+  if (spider.complete) {
+    measureAndCenter();
+  } else {
+    spider.addEventListener('load', measureAndCenter);
+  }
+
+  window.addEventListener('resize', measureAndCenter);
 });
