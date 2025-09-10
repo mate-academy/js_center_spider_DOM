@@ -1,6 +1,6 @@
 'use strict';
 
-window.onload = function () {
+function centerSpider() {
   const spiderObj = document.querySelector('.spider');
   const wallObj = document.querySelector('.wall');
 
@@ -11,18 +11,17 @@ window.onload = function () {
   wallObj.style.position = 'relative';
   spiderObj.style.position = 'absolute';
 
-  // Get computed styles to retrieve padding
-  const wallStyles = window.getComputedStyle(wallObj);
-  const paddingLeft = parseFloat(wallStyles.paddingLeft);
-  const paddingTop = parseFloat(wallStyles.paddingTop);
-
   // Calculate center position relative to content box (excluding padding)
-  const leftPos =
-    (wallObj.clientWidth - spiderObj.offsetWidth) / 2 + paddingLeft;
-  const topPos =
-    (wallObj.clientHeight - spiderObj.offsetHeight) / 2 + paddingTop;
+  const leftPos = (wallObj.clientWidth - spiderObj.offsetWidth) / 2;
+  const topPos = (wallObj.clientHeight - spiderObj.offsetHeight) / 2;
 
   // Set pixel-based positioning
   spiderObj.style.left = `${leftPos}px`;
   spiderObj.style.top = `${topPos}px`;
+}
+
+window.onload = function () {
+  centerSpider();
 };
+
+window.addEventListener('resize', centerSpider);
