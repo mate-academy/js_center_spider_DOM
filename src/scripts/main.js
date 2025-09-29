@@ -25,5 +25,18 @@ function centerSpider() {
   spider.style.top = `${topPosition}px`;
 }
 
-window.addEventListener('load', centerSpider);
-window.addEventListener('resize', centerSpider);
+function debounce(fn, delay = 100) {
+  let timeout;
+
+  return function () {
+    clearTimeout(timeout);
+    timeout = setTimeout(fn, delay);
+  };
+}
+
+function init() {
+  centerSpider();
+  window.addEventListener('resize', debounce(centerSpider));
+}
+
+window.addEventListener('load', init);
