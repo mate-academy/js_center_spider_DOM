@@ -1,26 +1,29 @@
 'use strict';
 
-const wall = document.querySelector('.wall');
-const spider = document.querySelector('.spider');
+function centerSpider() {
+  const wall = document.querySelector('.wall');
+  const spider = document.querySelector('.spider');
 
-if (!wall || !spider) {
-  throw new Error('Missing required DOM elements: .wall or .spider');
-}
+  if (!wall || !spider) {
+    return;
+  }
 
-const wallStyle = getComputedStyle(wall);
+  const wallStyle = getComputedStyle(wall);
 
-if (wallStyle.position === 'static') {
-  wall.style.position = 'relative';
-}
+  if (wallStyle.position === 'static') {
+    wall.style.position = 'relative';
+  }
 
-window.addEventListener('load', () => {
   const wallRect = wall.getBoundingClientRect();
   const spiderRect = spider.getBoundingClientRect();
 
-  const leftSteps = (wallRect.width - spiderRect.width) / 2;
-  const topSteps = (wallRect.height - spiderRect.height) / 2;
+  const leftPosition = (wallRect.width - spiderRect.width) / 2;
+  const topPosition = (wallRect.height - spiderRect.height) / 2;
 
   spider.style.position = 'absolute';
-  spider.style.left = `${leftSteps}px`;
-  spider.style.top = `${topSteps}px`;
-});
+  spider.style.left = `${leftPosition}px`;
+  spider.style.top = `${topPosition}px`;
+}
+
+window.addEventListener('load', centerSpider);
+window.addEventListener('resize', centerSpider);
