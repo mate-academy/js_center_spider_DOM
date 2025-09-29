@@ -3,6 +3,16 @@
 const wall = document.querySelector('.wall');
 const spider = document.querySelector('.spider');
 
+if (!wall || !spider) {
+  throw new Error('Missing required DOM elements: .wall or .spider');
+}
+
+const wallStyle = getComputedStyle(wall);
+
+if (wallStyle.position === 'static') {
+  wall.style.position = 'relative';
+}
+
 window.addEventListener('load', () => {
   const wallRect = wall.getBoundingClientRect();
   const spiderRect = spider.getBoundingClientRect();
