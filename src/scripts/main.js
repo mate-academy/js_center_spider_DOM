@@ -2,8 +2,26 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const spider = document.querySelector('.spider');
+  const wall = document.querySelector('.wall');
 
-  spider.style.top = '50%';
-  spider.style.left = '50%';
-  spider.style.transform = 'translate(-50%, -50%)';
+  if (!spider || !wall) {
+    return;
+  }
+
+  wall.style.position = 'relative';
+  spider.style.position = 'absolute';
+
+  const centerSpider = () => {
+    const top1 = (wall.clientHeight - spider.offsetHeight) / 2;
+    const left = (wall.clientWidth - spider.offsetWidth) / 2;
+
+    spider.style.top = `${top1}px`;
+    spider.style.left = `${left}px`;
+  };
+
+  if (spider.complete) {
+    centerSpider();
+  } else {
+    spider.addEventListener('load', centerSpider);
+  }
 });
