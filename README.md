@@ -3,6 +3,7 @@
 2. Follow [this instructions](https://mate-academy.github.io/layout_task-guideline/)
     - There are no tests for this task so use `npm run lint` command instead of `npm test`
 
+
 ### Task: Center the spider
 
 ![Preview](./src/images/preview.png)
