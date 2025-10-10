@@ -1,35 +1,51 @@
 'use strict';
 
 // write code here
-window.addEventListener('load', () => {
+function centerSpider() {
   const wall = document.querySelector('.wall');
   const spider = document.querySelector('.spider');
 
-  // Якщо елементи не знайдено — припиняємо виконання
+  // Якщо елементи не знайдені — виходимо
   if (!wall || !spider) {
     return;
   }
 
-  wall.style.position = 'relative';
+  // Не змінюємо layout, якщо вже задане позиціонування
+  const wallStyle = getComputedStyle(wall);
+
+  if (wallStyle.position === 'static') {
+    wall.style.position = 'relative';
+  }
+
   spider.style.position = 'absolute';
 
-  const wallWidth = wall.clientWidth;
-  const wallHeight = wall.clientHeight;
-  const spiderWidth = spider.clientWidth;
-  const spiderHeight = spider.clientHeight;
+  // Отримуємо положення та розміри контейнера
+  const wallRect = wall.getBoundingClientRect();
+  const spiderRect = spider.getBoundingClientRect();
 
-  const leftPos = (wallWidth - spiderWidth) / 2;
-  const topPos = (wallHeight - spiderHeight) / 2;
+  // Розрахунок центру з урахуванням прокрутки (явне звернення до window)
+  const leftPos = Math.round(
+    wallRect.left +
+      (wallRect.width - spiderRect.width) / 2 +
+      window.pageXOffset,
+  );
+  const topPos = Math.round(
+    wallRect.top +
+      (wallRect.height - spiderRect.height) / 2 +
+      window.pageYOffset,
+  );
 
+  // Встановлення координат
   spider.style.left = `${leftPos}px`;
   spider.style.top = `${topPos}px`;
+}
 
-  // (Необов’язково) повторне центрування при зміні розміру
+// Центруємо після завантаження
+window.addEventListener('load', () => {
+  centerSpider();
+
+  // Повторне центрування при зміні розміру
   window.addEventListener('resize', () => {
-    const newLeft = (wall.clientWidth - spider.clientWidth) / 2;
-    const newTop = (wall.clientHeight - spider.clientHeight) / 2;
-
-    spider.style.left = `${newLeft}px`;
-    spider.style.top = `${newTop}px`;
+    requestAnimationFrame(centerSpider);
   });
 });
