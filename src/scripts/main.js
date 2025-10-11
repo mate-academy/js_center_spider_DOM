@@ -1,14 +1,21 @@
 'use strict';
 
-const wall = document.querySelector('.wall');
-const spider = document.querySelector('.spider');
+window.addEventListener('DOMContentLoaded', () => {
+  const wall = document.querySelector('.wall');
+  const spider = document.querySelector('.spider');
 
-const wallWidth = wall.offsetWidth;
-const wallHeight = wall.offsetHeight;
+  if (!wall || !spider) {
+    return;
+  }
 
-const spiderWidth = spider.offsetWidth;
-const spiderHeight = spider.offsetHeight;
+  const spiderWidth = spider.offsetWidth;
+  const spiderHeight = spider.offsetHeight;
 
-spider.style.position = 'absolute';
-spider.style.left = (wallWidth - spiderWidth) / 2 + 'px';
-spider.style.top = (wallHeight - spiderHeight) / 2 + 'px';
+  const rect = wall.getBoundingClientRect();
+  const spiderLeft = rect.left + (rect.width - spiderWidth) / 2;
+  const spiderTop = rect.top + (rect.height - spiderHeight) / 2;
+
+  spider.style.position = 'absolute';
+  spider.style.top = spiderTop + 'px';
+  spider.style.left = spiderLeft + 'px';
+});
