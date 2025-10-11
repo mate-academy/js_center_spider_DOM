@@ -8,14 +8,20 @@ window.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  const spiderWidth = spider.offsetWidth;
-  const spiderHeight = spider.offsetHeight;
+  function center() {
+    wall.style.position = 'relative';
+    spider.style.position = 'absolute';
 
-  const rect = wall.getBoundingClientRect();
-  const spiderLeft = rect.left + (rect.width - spiderWidth) / 2;
-  const spiderTop = rect.top + (rect.height - spiderHeight) / 2;
+    const leftSpider = (wall.clientWidth - spider.offsetWidth) / 2;
+    const topSpider = (wall.clientHeight - spider.offsetHeight) / 2;
 
-  spider.style.position = 'absolute';
-  spider.style.top = spiderTop + 'px';
-  spider.style.left = spiderLeft + 'px';
+    spider.style.left = leftSpider + 'px';
+    spider.style.top = topSpider + 'px';
+  }
+
+  if (!spider.complete) {
+    spider.addEventListener('load', center);
+  } else {
+    center();
+  }
 });
