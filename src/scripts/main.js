@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   if (getComputedStyle(wall).position === 'static') {
-    wall.style.position = 'reletive';
+    wall.style.position = 'relative';
   }
 
   function centerSpider() {
@@ -36,4 +36,6 @@ window.addEventListener('DOMContentLoaded', () => {
   } else {
     spider.addEventListener('load', centerSpider);
   }
+
+  window.addEventListener('resize', centerSpider);
 });
