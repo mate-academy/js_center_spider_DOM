@@ -23,9 +23,9 @@ window.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    const leftPos = (wallWidth - spiderWidth) / 2;
     const topPos = (wallHeight - spiderHeight) / 2;
-
+    const leftPos = (wallWidth - spiderWidth) / 2;
+    
     spider.style.position = 'absolute';
     spider.style.left = `${leftPos}px`;
     spider.style.top = `${topPos}px`;
