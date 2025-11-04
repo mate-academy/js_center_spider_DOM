@@ -12,7 +12,7 @@ const centerY = (wallHeight - spiderHeight) / 2;
 const centerX = (wallWidth - spiderWidth) / 2;
 
 wall.style.position = 'relative';
-// spider.style.position = 'absolute';
+spider.style.position = 'absolute';
 
 spider.style.left = centerX + 'px';
 spider.style.top = centerY + 'px';
