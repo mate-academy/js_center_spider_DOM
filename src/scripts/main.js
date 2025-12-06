@@ -6,9 +6,9 @@ const wallWidth = wall.clientWidth;
 const wallHeight = wall.clientHeight;
 const spiderWidth = spider.clientWidth;
 const spiderHeight = spider.clientHeight;
-const leftPoz = (wallWidth - spiderWidth) / 2;
-const topPoz = (wallHeight - spiderHeight) / 2;
+const leftPosition = (wallWidth - spiderWidth) / 2;
+const topPosition = (wallHeight - spiderHeight) / 2;
 
 spider.style.position = 'absolute';
-spider.style.top = topPoz + 'px';
-spider.style.left = leftPoz + 'px';
+spider.style.top = topPosition + 'px';
+spider.style.left = leftPosition + 'px';
