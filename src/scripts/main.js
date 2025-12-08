@@ -3,6 +3,15 @@
 const wall = document.querySelector('.wall');
 const spider = document.querySelector('.spider');
 
+function dataChecker() {
+  if (wall === null || spider === null) {
+    return 'Ooops... Cant find it';
+  }
+}
+
+dataChecker(wall);
+dataChecker(spider);
+
 const wallWidth = wall.clientWidth;
 const wallHeight = wall.clientHeight;
 const spiderWidth = spider.clientWidth;
