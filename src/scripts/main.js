@@ -1,3 +1,23 @@
 'use strict';
 
-// write code here
+const wall = document.querySelector('.wall');
+const spider = document.querySelector('.spider');
+
+function dataChecker(param) {
+  if (param === null) {
+    return 'Ooops... Cant find it';
+  }
+}
+
+dataChecker(wall);
+dataChecker(spider);
+
+const wallWidth = wall.clientWidth;
+const wallHeight = wall.clientHeight;
+const spiderWidth = spider.clientWidth;
+const spiderHeight = spider.clientHeight;
+const wallCenterX = wallWidth / 2;
+const wallCenterY = wallHeight / 2;
+
+spider.style.left = wallCenterX - spiderWidth / 2 + 'px';
+spider.style.top = wallCenterY - spiderHeight / 2 + 'px';
