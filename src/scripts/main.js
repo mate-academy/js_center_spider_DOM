@@ -3,8 +3,8 @@
 const wall = document.querySelector('.wall');
 const spider = document.querySelector('.spider');
 
-function dataChecker() {
-  if (wall === null || spider === null) {
+function dataChecker(param) {
+  if (param === null) {
     return 'Ooops... Cant find it';
   }
 }
