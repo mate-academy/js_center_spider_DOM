@@ -10,5 +10,3 @@ const spiderWidth = spider.clientWidth;
 
 spider.style.top = `${(wallHeight - spiderHeight) / 2}px`;
 spider.style.left = `${(wallWidth - spiderWidth) / 2}px`;
-spider.style.bottom = '0px';
-spider.style.right = '0px';
