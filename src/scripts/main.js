@@ -3,6 +3,8 @@
 const wall = document.body.querySelector('.wall');
 const spider = wall.querySelector('.spider');
 
-spider.style.top = '50%';
-spider.style.left = '50%';
-spider.style.transform = 'translate(-50%, -50%)';
+const offsetY = (wall.clientHeight - spider.clientHeight) / 2;
+const offsetX = (wall.clientWidth - spider.clientWidth) / 2;
+
+spider.style.top = `${offsetY}px`;
+spider.style.left = `${offsetX}px`;
