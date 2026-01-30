@@ -6,18 +6,15 @@ const spider = document.querySelector('.spider');
 wall.style.position = 'relative';
 spider.style.position = 'absolute';
 
-function centerSpider() {
-  const wallWidth = wall.offsetWidth;
-  const wallHeight = wall.offsetHeight;
+function centerSpiderPx() {
+  const centerX = wall.clientWidth / 2;
+  const centerY = wall.clientHeight / 2;
 
-  const spiderWidth = spider.offsetWidth;
-  const spiderHeight = spider.offsetHeight;
-
-  const leftPx = (wallWidth - spiderWidth) / 2;
-  const topPx = (wallHeight - spiderHeight) / 2;
+  const leftPx = centerX - spider.offsetWidth / 2;
+  const topPx = centerY - spider.offsetHeight / 2;
 
   spider.style.left = `${leftPx}px`;
   spider.style.top = `${topPx}px`;
 }
 
-centerSpider();
+centerSpiderPx();
