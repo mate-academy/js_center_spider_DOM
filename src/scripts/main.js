@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const wall = document.querySelector('.wall');
   const spider = document.querySelector('.spider');
 
-  if (!wall && !spider) {
+  if (!wall || !spider) {
     return;
   }
 
