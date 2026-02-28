@@ -1,9 +1,16 @@
 'use strict';
 
 // write code here
-const spider = document.querySelector('.spider');
+const wall = document.querySelector('.wall');
+const wallWidth = wall.offsetWidth;
+const wallHeight = wall.offsetHeight;
 
-spider.style.transform = 'translate(-50%, -50%)';
+const spider = document.querySelector('.spider');
+const spiderWidth = spider.offsetWidth;
+const spiderHeight = spider.offsetHeight;
+
 spider.style.position = 'absolute';
-spider.style.top = '50%';
-spider.style.left = '50%';
+spider.style.top = (wallHeight / 2 - spiderHeight / 2) + 'px';
+spider.style.left = (wallWidth / 2 - spiderWidth / 2) + 'px';
+
+
