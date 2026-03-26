@@ -4,7 +4,7 @@ const wall = document.querySelector('.wall');
 const spider = document.querySelector('.spider');
 
 const wallWidth = wall.clientWidth;
-const wallHeight = wall.clientWidth;
+const wallHeight = wall.clientHeight;
 const spiderWidth = spider.offsetWidth;
 const spiderHeight = spider.offsetHeight;
 
