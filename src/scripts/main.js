@@ -9,7 +9,7 @@ const wallHeight = wall.offsetHeight;
 const spiderWidth = spider.offsetWidth;
 const spiderHeight = spider.offsetHeight;
 
-spider.style.position = 'absolute';
+spider.style.position = 'relative';
 
 spider.style.left = wallWidth / 2 - spiderWidth / 2 + 'px';
 spider.style.top = wallHeight / 2 - spiderHeight / 2 + 'px';
