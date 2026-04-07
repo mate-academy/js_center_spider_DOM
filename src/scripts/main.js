@@ -1,10 +1,16 @@
 'use strict';
 
-const wall = document.querySelector('.wall');
-const spider = document.querySelector('.spider');
+const wallEl = document.querySelector('.wall');
+const spiderEl = document.querySelector('.spider');
 
-const offsetWidthValue = (wall.offsetWidth - spider.offsetWidth) / 2;
-const offsetHeightValue = (wall.offsetHeight - spider.offsetHeight) / 2;
+window.addEventListener('load', () => {
+  const widthWall = wallEl.clientWidth;
+  const heightWall = wallEl.clientHeight;
+  const widthSpider = spiderEl.offsetWidth;
+  const heightSpider = spiderEl.offsetHeight;
+  const left = widthWall / 2 - widthSpider / 2;
+  const topEl = heightWall / 2 - heightSpider / 2;
 
-spider.style.top = `${offsetHeightValue}px`;
-spider.style.left = `${offsetWidthValue}px`;
+  spiderEl.style.left = left + 'px';
+  spiderEl.style.top = topEl + 'px';
+});
