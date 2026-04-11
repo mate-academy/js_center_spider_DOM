@@ -1,7 +1,7 @@
 'use strict';
 // викликаємо функцію, коли вікно повністю завантажиться (всі картинки на місці)
 
-window.addEventListener('load', () => {
+window.centerSpider = () => {
   // СПОЧАТКУ шукаємо елементи, щоб було що перевіряти
   const wall = document.querySelector('.wall');
   const spider = document.querySelector('.spider');
@@ -32,4 +32,10 @@ window.addEventListener('load', () => {
   // додаємо 'px', щоб браузер розумів одиниці виміру
   spider.style.left = `${left}px`;
   spider.style.top = `${topPos}px`;
-});
+};
+
+// Викликаємо функцію при завантаженні (для звичайної роботи)
+window.addEventListener('load', window.centerSpider);
+
+// Також можна додати на resize, щоб павук не тікав
+window.addEventListener('resize', window.centerSpider);
