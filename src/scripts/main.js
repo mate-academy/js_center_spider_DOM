@@ -6,7 +6,7 @@ window.centerSpider = () => {
   const wall = document.querySelector('.wall');
   const spider = document.querySelector('.spider');
 
-  // ТЕПЕР робимо перевірку наявності
+  // ТЕПЕР робимо перевірка наявності
   if (!wall || !spider) {
     return;
   }
@@ -18,10 +18,12 @@ window.centerSpider = () => {
   spider.style.position = 'absolute';
 
   // вимірюємо поточну ширину та висоту елементів (враховуючи відступи)
+  // для стіни використовуємо clientWidth,
+  // щоб не враховувати товщину рамок (border)
   const spiderWidth = spider.offsetWidth;
   const spiderHeight = spider.offsetHeight;
-  const wallWidth = wall.offsetWidth;
-  const wallHeight = wall.offsetHeight;
+  const wallWidth = wall.clientWidth;
+  const wallHeight = wall.clientHeight;
 
   // рахуємо координати за формулою: (РозмірСтіни - РозмірПавука) / 2
   // щоб залишити рівну кількість вільного місця з обох боків
