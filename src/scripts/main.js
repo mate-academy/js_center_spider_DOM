@@ -1,9 +1,13 @@
 'use strict';
 
-const wall = document.querySelector('.wall');
-const spider = document.querySelector('.spider');
-
 window.addEventListener('load', () => {
+  const wall = document.querySelector('.wall');
+  const spider = document.querySelector('.spider');
+
+  if (!wall || !spider) {
+    return;
+  }
+
   const wallWidth = wall.clientWidth;
   const wallHeight = wall.clientHeight;
   const spiderWidth = spider.clientWidth;
