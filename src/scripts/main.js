@@ -5,9 +5,11 @@ const wall = document.querySelector('.wall');
 const spider = document.querySelector('.spider');
 const wallStyles = getComputedStyle(wall);
 const borderLeftRight =
-  wallStyles.borderRightWidth + wallStyles.borderLeftWidth;
+  Number(wallStyles.borderRightWidth.replace('px', '')) +
+  Number(wallStyles.borderLeftWidth.replace('px', ''));
 const borderTopBottom =
-  wallStyles.borderTopWidth + wallStyles.borderBottomWidth;
+  Number(wallStyles.borderTopWidth.replace('px', '')) +
+  Number(wallStyles.borderBottomWidth.replace('px', ''));
 const wallWidth = wall.offsetWidth;
 const wallHeight = wall.offsetHeight;
 const wightSpider = spider.offsetWidth;
