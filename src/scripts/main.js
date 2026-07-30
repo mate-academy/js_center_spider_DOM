@@ -1,16 +1,11 @@
 'use strict';
 
-function positionSpider(selection) {
-  const spider = document.querySelector(selection);
-  const spiderWidth = spider.offsetWidth;
-  const spiderHeight = spider.offsetHeight;
+function positionSpider(hero, container) {
+  const spider = document.querySelector(hero);
+  const wall = document.querySelector(container);
 
-  const wall = document.querySelector('.wall');
-  const wallWidth = wall.offsetWidth;
-  const wallHeight = wall.offsetHeight;
-
-  spider.style.top = `${(wallHeight - spiderHeight) / 2}px`;
-  spider.style.left = `${(wallWidth - spiderWidth) / 2}px`;
+  spider.style.top = `${(wall.clientHeight - spider.clientHeight) / 2}px`;
+  spider.style.left = `${(wall.clientWidth - spider.clientWidth) / 2}px`;
 }
 
-positionSpider('.spider');
+positionSpider('.spider', '.wall');
