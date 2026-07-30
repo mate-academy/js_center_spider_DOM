@@ -2,20 +2,15 @@
 
 function positionSpider(selection) {
   const spider = document.querySelector(selection);
+  const spiderWidth = spider.offsetWidth;
+  const spiderHeight = spider.offsetHeight;
 
-  const data = {
-    type: 'absolute',
-    coords: {
-      top: '50%',
-      left: '50%',
-    },
-    transform: '-50% -50%',
-  };
+  const wall = document.querySelector('.wall');
+  const wallWidth = wall.offsetWidth;
+  const wallHeight = wall.offsetHeight;
 
-  spider.style.position = data.type;
-  spider.style.top = data.coords.top;
-  spider.style.left = data.coords.left;
-  spider.style.translate = data.transform;
+  spider.style.top = `${(wallHeight - spiderHeight) / 2}px`;
+  spider.style.left = `${(wallWidth - spiderWidth) / 2}px`;
 }
 
 positionSpider('.spider');
