@@ -4,7 +4,10 @@
 const spider = document.querySelector('.spider');
 const wall = document.querySelector('.wall');
 
-wall.style.display = 'flex';
-wall.style.justifyContent = 'center';
-wall.style.alignItems = 'center';
-spider.style.position = 'static';
+
+const leftPoint = (wall.offsetWidth - spider.offsetWidth) / 2;
+const topPoint = (wall.offsetHeight - spider.offsetHeight) / 2;
+
+spider.style.top = topPoint + 'px';
+spider.style.left = leftPoint + 'px';
+
