@@ -8,4 +8,5 @@ function centerSpider() {
   spider.style.top = `${(wall.clientHeight - spider.clientHeight) / 2}px`;
 }
 
-centerSpider();
+document.addEventListener('DOMContentLoaded', centerSpider);
+window.addEventListener('resize', centerSpider);
