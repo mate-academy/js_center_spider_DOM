@@ -4,8 +4,8 @@ const spider = document.querySelector('.spider');
 const wall = spider.parentElement;
 
 function centerSpider() {
-  spider.style.left = `${(wall.offsetWidth - spider.offsetWidth) / 2}px`;
-  spider.style.top = `${(wall.offsetHeight - spider.offsetHeight) / 2}px`;
+  spider.style.left = `${(wall.clientWidth - spider.clientWidth) / 2}px`;
+  spider.style.top = `${(wall.clientHeight - spider.clientHeight) / 2}px`;
 }
 
 centerSpider();
