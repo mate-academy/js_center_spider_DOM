@@ -11,8 +11,8 @@ const spider = document.querySelector('.spider');
 const spiderWidth = spider.offsetWidth;
 const spiderHeight = spider.offsetHeight;
 
-const x = wallWidth / 2 - spiderWidth / 2;
-const y = wallHeight / 2 - spiderHeight / 2;
+const x = (wallWidth - spiderWidth) / 2;
+const y = (wallHeight - spiderHeight) / 2;
 
 spider.style.left = x + 'px';
 spider.style.top = y + 'px';
