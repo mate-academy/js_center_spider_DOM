@@ -1,12 +1,13 @@
 'use strict';
 
 const spider = document.querySelector('.spider');
-const wall = spider.parentElement;
+const wall = document.querySelector('.wall');
 
-const { width: wallWidth, height: wallHeight } = wall.getBoundingClientRect();
+const wallWidth = wall.clientWidth;
+const wallHeight = wall.clientHeight;
 
-const { width: spiderWidth, height: spiderHeight } =
-  spider.getBoundingClientRect();
+const spiderWidth = spider.offsetWidth;
+const spiderHeight = spider.offsetHeight;
 
-spider.style.left = `${(wallWidth - spiderWidth) / 2 - 10}px`;
-spider.style.top = `${(wallHeight - spiderHeight) / 2 - 10}px`;
+spider.style.left = `${(wallWidth - spiderWidth) / 2}px`;
+spider.style.top = `${(wallHeight - spiderHeight) / 2}px`;
