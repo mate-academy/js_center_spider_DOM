@@ -2,8 +2,9 @@
 
 // write code here
 
+const wall = document.querySelector('.wall');
 const spider = document.querySelector('.spider');
 
-spider.style.left = `50%`
-spider.style.top = `50%`
+spider.style.left = `${wall.clientWidth / 2}px`
+spider.style.top = `${wall.clientHeight / 2}px`
 spider.style.transform = 'translate(-50%, -50%)'
